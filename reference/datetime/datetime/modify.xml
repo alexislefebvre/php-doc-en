@@ -100,6 +100,29 @@ echo $date->format('Y-m-d') . "\n";
 ]]>
    </screen>
   </example>
+  <example>
+   <title>All formats of Date and Time are supported</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$date = new DateTime('2000-12-31');
+
+$date->modify('July 1st, 2008');
+echo $date->format('Y-m-d') . "\n";
+
+$date->modify('Monday next week');
+echo $date->format('Y-m-d') . "\n";
+?>
+]]>
+   </programlisting>
+   &example.outputs;
+   <screen>
+<![CDATA[
+2008-07-01
+2008-07-07
+]]>
+   </screen>
+  </example>
  </refsect1>
 
  <refsect1 role="seealso">
